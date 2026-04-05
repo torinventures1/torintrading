@@ -9,8 +9,8 @@ const TradingViewChart = memo(function TradingViewChart({ symbol }: TradingViewC
   const containerRef = useRef<HTMLDivElement>(null)
 
   const getTradingViewSymbol = (sym: Symbol): string => {
-    // NIFTY 50 index - use TVC (TradingView Charts) exchange for indices
-    return sym === 'nifty' ? 'TVC:NIFTY' : 'BINANCE:BTCUSDT'
+    // NSE:NIFTY for Nifty 50 Index on National Stock Exchange of India
+    return sym === 'nifty' ? 'NSE:NIFTY' : 'BINANCE:BTCUSDT'
   }
 
   useEffect(() => {

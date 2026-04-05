@@ -56,20 +56,18 @@ export default function QuantEngine() {
 
   return (
     <div className="bg-black/40 rounded-2xl border border-purple/20 p-4 backdrop-blur-sm overflow-hidden">
-      {/* Header */}
+      {/* Header - Subtle indicator only */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <div className="relative">
             <Cpu className="w-4 h-4 text-purple-400" />
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
           </div>
-          <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider">
-            Quant Engine
-          </h3>
+          <span className="text-xs text-gray-500">Signal Analysis</span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           <Activity className="w-3 h-3 text-green-400 animate-pulse" />
-          <span className="text-xs text-green-400">Processing</span>
+          <span className="text-[10px] text-green-400/80">Active</span>
         </div>
       </div>
 

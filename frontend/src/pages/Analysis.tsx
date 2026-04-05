@@ -109,16 +109,16 @@ export default function Analysis() {
             </Link>
 
             {/* Symbol Tabs - Now in header */}
-            <div className="flex items-center bg-white/[0.03] rounded-xl p-1 border border-white/5">
+            <div className="flex items-center gap-2">
               {SYMBOLS.map((s) => (
                 <button
                   key={s.id}
                   onClick={() => navigate(`/analysis/${s.id}`)}
                   className={cn(
-                    'px-4 py-2 rounded-lg text-sm font-medium transition-all',
+                    'px-4 py-2 rounded-lg text-sm font-medium transition-all border-2',
                     symbol === s.id
-                      ? 'bg-gradient-to-r from-purple to-purple-light text-white shadow-lg shadow-purple/25'
-                      : 'text-gray-400 hover:text-white hover:bg-white/5'
+                      ? 'bg-purple/20 text-white border-purple shadow-lg shadow-purple/20'
+                      : 'bg-white/[0.03] text-gray-400 border-transparent hover:text-white hover:border-purple/30'
                   )}
                 >
                   {s.label}
