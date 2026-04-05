@@ -34,6 +34,16 @@ export default {
         'gradient-purple-dark': 'linear-gradient(135deg, #9333EA 0%, #6B21A8 100%)',
         'gradient-radial': 'radial-gradient(ellipse at center, #1a0a2e 0%, #000000 70%)',
       },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(-4px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [],
