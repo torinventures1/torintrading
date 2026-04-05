@@ -8,10 +8,10 @@ export default function StatusBadge({ isLive }: StatusBadgeProps) {
   return (
     <div
       className={cn(
-        'inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium',
+        'inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide border',
         isLive
-          ? 'bg-profit/20 text-profit'
-          : 'bg-gray-500/20 text-gray-400'
+          ? 'bg-profit/10 text-profit border-profit/20'
+          : 'bg-white/5 text-gray-400 border-white/10'
       )}
     >
       <span

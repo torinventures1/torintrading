@@ -9,13 +9,13 @@ interface CommentaryBoxProps {
 export default function CommentaryBox({ items, isLoading }: CommentaryBoxProps) {
   if (isLoading) {
     return (
-      <div className="bg-dark-lighter rounded-xl border border-white/5 p-6">
-        <h3 className="text-lg font-semibold text-white mb-4">Live Commentary</h3>
+      <div className="bg-white/[0.02] rounded-2xl border border-white/5 p-6">
+        <h3 className="text-lg font-semibold text-white mb-6">Live Commentary</h3>
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex items-center gap-4 animate-pulse">
-              <div className="w-12 h-4 bg-gray-700 rounded" />
-              <div className="flex-1 h-4 bg-gray-700 rounded" />
+              <div className="w-14 h-4 bg-white/5 rounded" />
+              <div className="flex-1 h-4 bg-white/5 rounded" />
             </div>
           ))}
         </div>
@@ -24,14 +24,16 @@ export default function CommentaryBox({ items, isLoading }: CommentaryBoxProps) 
   }
 
   return (
-    <div className="bg-dark-lighter rounded-xl border border-white/5 p-6">
-      <h3 className="text-lg font-semibold text-white mb-4">Live Commentary</h3>
+    <div className="bg-white/[0.02] rounded-2xl border border-white/5 p-6">
+      <h3 className="text-lg font-semibold text-white mb-6">Live Commentary</h3>
       {items.length === 0 ? (
-        <p className="text-gray-400 text-center py-8">
-          No commentary yet. Check back when the market is open.
-        </p>
+        <div className="text-center py-12">
+          <p className="text-gray-500">
+            No commentary yet. Check back when the market is open.
+          </p>
+        </div>
       ) : (
-        <div className="max-h-[400px] overflow-y-auto">
+        <div className="max-h-[500px] overflow-y-auto space-y-1">
           {items.map((item) => (
             <CommentaryItem key={item.id} item={item} />
           ))}

@@ -67,8 +67,8 @@ export default function TradingViewChart({ symbol }: TradingViewChartProps) {
   return (
     <div
       ref={containerRef}
-      className="bg-dark-lighter rounded-xl border border-white/5 overflow-hidden"
-      style={{ height: '400px' }}
+      className="bg-white/[0.02] rounded-2xl border border-white/5 overflow-hidden"
+      style={{ height: '450px' }}
     >
       <div id="tv-chart" className="w-full h-full" />
     </div>

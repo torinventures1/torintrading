@@ -28,27 +28,28 @@ export default function Analysis() {
   return (
     <div className="min-h-screen pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <Link
-              to="/"
-              className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-          </div>
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <Link
+            to="/"
+            className="text-gray-400 hover:text-purple transition-colors flex items-center gap-2 group"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
+          </Link>
           <div className="flex items-center gap-4">
             <h1 className="text-2xl font-bold text-white">{displayName}</h1>
             <StatusBadge isLive={isOpen} />
           </div>
         </div>
 
-        <div className="mb-6">
+        {/* Chart */}
+        <div className="mb-8">
           <TradingViewChart symbol={symbol} />
         </div>
 
-        <div className="flex gap-2 mb-6">
+        {/* Symbol Tabs */}
+        <div className="flex gap-3 mb-8">
           {SYMBOLS.map((s) => (
             <Button
               key={s.id}
@@ -56,7 +57,7 @@ export default function Analysis() {
               size="sm"
               onClick={() => navigate(`/analysis/${s.id}`)}
               className={cn(
-                symbol === s.id && 'ring-2 ring-accent/50'
+                symbol === s.id && 'shadow-lg shadow-purple/25'
               )}
             >
               {s.label}
@@ -64,6 +65,7 @@ export default function Analysis() {
           ))}
         </div>
 
+        {/* Commentary */}
         <CommentaryBox items={items} isLoading={isLoading} />
       </div>
     </div>

@@ -31,25 +31,25 @@ export default function CommentaryItem({ item }: CommentaryItemProps) {
     switch (item.trade_type) {
       case 'long':
         return (
-          <span className="px-2 py-1 bg-profit/20 text-profit text-xs rounded font-medium">
+          <span className="px-2.5 py-1 bg-profit/10 text-profit text-xs rounded-full font-medium border border-profit/20">
             LONG
           </span>
         )
       case 'short':
         return (
-          <span className="px-2 py-1 bg-loss/20 text-loss text-xs rounded font-medium">
+          <span className="px-2.5 py-1 bg-loss/10 text-loss text-xs rounded-full font-medium border border-loss/20">
             SHORT
           </span>
         )
       case 'target':
         return (
-          <span className="px-2 py-1 bg-profit/20 text-profit text-xs rounded font-medium">
+          <span className="px-2.5 py-1 bg-profit/10 text-profit text-xs rounded-full font-medium border border-profit/20">
             TARGET
           </span>
         )
       case 'exit':
         return (
-          <span className="px-2 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded font-medium">
+          <span className="px-2.5 py-1 bg-yellow-500/10 text-yellow-500 text-xs rounded-full font-medium border border-yellow-500/20">
             EXIT
           </span>
         )
@@ -59,14 +59,14 @@ export default function CommentaryItem({ item }: CommentaryItemProps) {
   }
 
   return (
-    <div className="flex items-start gap-4 py-4 border-b border-white/5 last:border-0">
-      <span className="text-gray-500 text-sm font-mono shrink-0 pt-0.5">
+    <div className="flex items-start gap-4 py-4 px-4 -mx-4 rounded-xl hover:bg-white/[0.02] transition-colors">
+      <span className="text-gray-600 text-sm font-mono shrink-0 pt-0.5">
         {time}
       </span>
-      <span className={cn('flex-1', getTypeStyles())}>
+      <span className={cn('flex-1 leading-relaxed', getTypeStyles())}>
         {item.message}
         {item.price_level && (
-          <span className="text-gray-400 ml-2">@ {item.price_level}</span>
+          <span className="text-gray-500 ml-2">@ {item.price_level}</span>
         )}
       </span>
       {getBadge()}

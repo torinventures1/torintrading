@@ -10,9 +10,40 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #1a1a2e;
+  background-color: #000000;
   color: #ffffff;
   min-height: 100vh;
+}
+
+/* Purple gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #A855F7 0%, #C084FC 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Purple glow effect */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), 0 0 40px rgba(168, 85, 247, 0.1);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 ::-webkit-scrollbar {
@@ -21,14 +52,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a2e;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3a3a5e;
+  background: #2a2a2a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a4a6e;
+  background: #3a3a3a;
 }

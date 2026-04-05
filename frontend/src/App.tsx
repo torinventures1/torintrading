@@ -6,7 +6,7 @@ import Navbar from './components/layout/Navbar'
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen bg-black bg-grid">
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
